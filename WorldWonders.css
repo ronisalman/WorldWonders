@@ -1,0 +1,36 @@
+h1 {
+	color: white;
+	text-align: center;
+	letter-spacing: 3px;
+	text-shadow: 2px 2px black;
+	font-family: "Open Sans", sans-serif;
+
+	background-color: rgb(0, 51, 102, .7);
+	height: 100%;
+	padding: 10px 0px;
+	margin: 0px 0px;
+}
+
+body {
+	background: rgb(51, 102, 153);
+	margin: 0px 0px;
+}
+
+#row {
+	/** putting images on same row **/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10px;
+}
+
+.columns {
+	height: 80%;
+	height: 80%;
+	padding: 5px;
+}
+
+.wonders {
+	height: 100%;
+	width: 100%;
+}
