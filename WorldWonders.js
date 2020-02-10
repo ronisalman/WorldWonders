@@ -6,6 +6,7 @@ init();
 function init(){
 
 	showStreetView();
+	movingWonders();
 
 }
 
@@ -26,3 +27,25 @@ function showStreetView() {
 
 }
 
+function movingWonders() {
+
+	var box = document.querySelectorAll(".columns");
+
+	var position = 0;
+
+	var timer = setInterval(movement, 50);
+
+	function movement() {
+		if(position === 300) {
+			clearInterval(timer);
+		}
+		else {
+			position++;
+			for(var i = 0; i<box.length; i++) {
+				box[i].style.left = position + "px";
+			}
+		}
+	}
+	
+
+}

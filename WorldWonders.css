@@ -24,12 +24,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding-top: 10px;
+	position: relative;
 }
 
 .columns {
 	height: 80%;
 	height: 80%;
 	padding: 5px;
+	position: relative;
 }
 
 .wonders {
