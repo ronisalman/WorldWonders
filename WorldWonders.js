@@ -26,4 +26,3 @@ function showStreetView() {
 
 }
 
-// Implement git //
