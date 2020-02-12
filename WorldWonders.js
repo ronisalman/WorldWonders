@@ -29,28 +29,10 @@ function showStreetView() {
 
 function movingWonders() {
 
-	var holder = document.querySelector("#row");
+	var columns = document.querySelectorAll(".columns");
 
-	var box = document.querySelectorAll(".columns");
-
-	var timer = setInterval(movement, 50);
-
-	var position = 0;
-
-	function movement() {
-		for(var i = 0; i<box.length; i++) {
-
-			position++;
-
-			if(box[i].offsetWidth+box[i].offsetLeft>=holder.offsetWidth){
-				box[i].style.left = -position + "px";
-			}
-			else{
-				box[i].style.left = position + "px";
-			}
-		}
-		
+	for(var i=0; i<columns.length; i++){
+		columns[i].style.transform = "translate("+10+"px)";
 	}
-
 
 }

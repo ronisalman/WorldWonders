@@ -19,18 +19,16 @@ body {
 }
 
 #row {
-	/** putting images on same row **/
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 100%;
+	width: 100%;
 	padding-top: 10px;
-	position: relative;
 }
 
 .columns {
-	height: 80%;
-	height: 80%;
+	height: 13%;
+	width: 13%;
 	padding: 5px;
+	float: left;
 	position: relative;
 }
 
@@ -38,3 +36,4 @@ body {
 	height: 100%;
 	width: 100%;
 }
+
