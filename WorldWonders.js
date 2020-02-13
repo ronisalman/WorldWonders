@@ -29,10 +29,31 @@ function showStreetView() {
 
 function movingWonders() {
 
+	var row = document.querySelector("#row");
 	var columns = document.querySelectorAll(".columns");
+	var counter = 0;
 
-	for(var i=0; i<columns.length; i++){
-		columns[i].style.transform = "translate("+10+"px)";
+	var repeater = setInterval(movement, 30);
+
+	function movement(){
+		for(var i=0; i<columns.length; i++){
+
+			if(columns[i].offsetLeft>=row.offsetWidth){
+				console.log(row.offsetWidth);
+				console.log(columns[6].offsetLeft);
+				columns[i].style.left = -1544 + "px";
+				console.log(columns[6].offsetLeft);
+				clearInterval(repeater);
+				return;
+			}
+
+			counter++;
+			columns[i].style.left = counter + "px"; //this is making the style above in IF getting cancelled 
+		}
+
+		if(counter>=500){
+			clearInterval(repeater);
+		}
 	}
 
 }
