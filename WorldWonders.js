@@ -31,29 +31,27 @@ function movingWonders() {
 
 	var row = document.querySelector("#row");
 	var columns = document.querySelectorAll(".columns");
-	var counter = 0;
+	var starting = [0,257,515,772,1030,1287,1544];
+	var counter = [0,0,0,0,0,0,0];
 
-	var repeater = setInterval(movement, 30);
+	var repeater = setInterval(movement, 10);
 
 	function movement(){
+
 		for(var i=0; i<columns.length; i++){
 
 			if(columns[i].offsetLeft>=row.offsetWidth){
-				console.log(row.offsetWidth);
-				console.log(columns[6].offsetLeft);
-				columns[i].style.left = -1544 + "px";
-				console.log(columns[6].offsetLeft);
-				clearInterval(repeater);
-				return;
+				columns[i].style.left = -(starting[i]+columns[i].offsetWidth) + "px";
+				counter[i]=-(starting[i]+columns[i].offsetWidth-10);
 			}
 
-			counter++;
-			columns[i].style.left = counter + "px"; //this is making the style above in IF getting cancelled 
+			else {
+				columns[i].style.left = counter[i] + "px";
+			}
+
+			counter[i]++;
 		}
 
-		if(counter>=500){
-			clearInterval(repeater);
-		}
 	}
 
 }
