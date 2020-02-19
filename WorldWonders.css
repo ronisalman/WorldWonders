@@ -16,6 +16,7 @@ h1 {
 body {
 	background: rgb(51, 102, 153);
 	margin: 0px 0px;
+	overflow: hidden;
 }
 
 #row {
@@ -29,6 +30,9 @@ body {
 	width: 13%;
 	float: left;
 	position: relative;
+	margin: 0 10px;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .wonders {
@@ -36,3 +40,7 @@ body {
 	width: 100%;
 }
 
+#streetViewHolder {
+	margin-top: 15%;
+	text-align: center;
+}

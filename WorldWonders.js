@@ -31,7 +31,7 @@ function movingWonders() {
 
 	var row = document.querySelector("#row");
 	var columns = document.querySelectorAll(".columns");
-	var starting = [0,257,515,772,1030,1287,1544];
+	var starting = [10,280,549,819,1088,1358,1628];
 	var counter = [0,0,0,0,0,0,0];
 
 	var repeater = setInterval(movement, 10);
